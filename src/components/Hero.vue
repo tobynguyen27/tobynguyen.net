@@ -15,7 +15,7 @@
             </p>
         </div>
         <div class="flex flex-row gap-5">
-            <a href="https://resume.tobynguyen.net" target="_blank" border="~ default" class="text-black p-3 bg-white duration-200 hover:(opacity-80 cursor-pointer)">
+            <a href="https://resume.tobynguyen.net" target="_blank" border="~ default" class="text-white p-3 bg-black duration-200 dark:(text-black bg-white) hover:(opacity-80 cursor-pointer)">
                 View Resume
             </a><a href="mailto:hi@tobynguyen.net" border="~ default hover:hover" class="p-3 duration-200 hover:(bg-gray-200 cursor-pointer)">
                 Contact Me
