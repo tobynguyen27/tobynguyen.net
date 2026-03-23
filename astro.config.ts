@@ -1,11 +1,12 @@
 import MDX from "@astrojs/mdx"
+import React from "@astrojs/react"
 import sitemap from "@astrojs/sitemap"
 import Vue from "@astrojs/vue"
 import { defineConfig } from "astro/config"
 import UnoCSS from "unocss/astro"
 
 export default defineConfig({
-    integrations: [UnoCSS(), Vue(), MDX(), sitemap()],
+    integrations: [UnoCSS(), Vue(), MDX(), sitemap(), React()],
 
     markdown: {
         shikiConfig: {
