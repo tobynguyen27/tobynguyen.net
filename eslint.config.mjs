@@ -11,6 +11,7 @@ export default antfu({
     },
     formatters: {
         css: true,
+        astro: true
     },
 
     vue: true,
