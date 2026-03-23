@@ -43,6 +43,7 @@
         "eslint-plugin-astro": "catalog:lint",
         "eslint-plugin-format": "catalog:lint",
         "lefthook": "catalog:lint",
+        "prettier-plugin-astro": "catalog:lint",
         "typescript": "catalog:types",
         "wrangler": "catalog:build"
     }
