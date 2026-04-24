@@ -7,7 +7,6 @@ catalogs:
     "@astrojs/compiler-rs": ^0.1.4
     "@astrojs/react": ^5.0.1
     "@astrojs/vue": ^6.0.0
-    "@takumi-rs/image-response": ^0.73.1
     astro: ^6.0.4
     wrangler: ^4.74.0
   frontend:
@@ -25,6 +24,7 @@ catalogs:
     ufo: ^1.6.3
     unocss: ^66.6.6
     vue: ^3.5.30
+    takumi-js: ^1.1.2
   lint:
     "@antfu/eslint-config": ^7.7.2
     "@unocss/eslint-plugin": ^66.6.6

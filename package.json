@@ -19,7 +19,6 @@
         "@astrojs/react": "catalog:build",
         "@astrojs/sitemap": "catalog:frontend",
         "@astrojs/vue": "catalog:build",
-        "@takumi-rs/image-response": "catalog:build",
         "@unocss/astro": "catalog:frontend",
         "@vueuse/components": "catalog:frontend",
         "@vueuse/core": "catalog:frontend",
@@ -29,6 +28,7 @@
         "react": "catalog:frontend",
         "react-dom": "catalog:frontend",
         "reading-time": "catalog:frontend",
+        "takumi-js": "catalog:frontend",
         "ufo": "catalog:frontend",
         "unocss": "catalog:frontend",
         "vue": "catalog:frontend"

@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro"
 import DefaultOg from "@components/og/DefaultOg"
-import ImageResponse from "@takumi-rs/image-response"
+import { ImageResponse } from "takumi-js/response"; 
 
 export const GET = (async () => {
     return new ImageResponse(
@@ -12,3 +12,4 @@ export const GET = (async () => {
         },
     )
 }) satisfies APIRoute
+

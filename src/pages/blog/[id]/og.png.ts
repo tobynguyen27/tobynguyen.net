@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro"
 import OG from "@components/og/BlogOg"
-import ImageResponse from "@takumi-rs/image-response"
+import { ImageResponse } from "takumi-js/response"; 
 import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
