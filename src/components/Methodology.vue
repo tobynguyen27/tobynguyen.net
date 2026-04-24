@@ -26,7 +26,7 @@ const items: Method[] = [
 
 <template>
     <div class="mb-24 mt-36 w-full space-y-12">
-        <h1 class="text-5xl font-serif">
+        <h1 class="text-5xl">
             Methodology
         </h1>
 
@@ -35,7 +35,7 @@ const items: Method[] = [
                 <p class="font-mono">
                     0{{ index + 1 }}
                 </p>
-                <h2 class="text-3xl font-serif underline-offset-5">
+                <h2 class="text-3xl underline-offset-5">
                     {{ it.name }}
                 </h2>
                 <p class="text-muted">

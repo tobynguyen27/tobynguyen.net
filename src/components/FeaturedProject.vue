@@ -25,7 +25,7 @@ const { image } = defineProps<Props>()
                 </div>
 
                 <div class="space-y-8">
-                    <h1 class="text-4xl font-serif">
+                    <h1 class="text-4xl">
                         {{ name }}
                     </h1>
                     <p class="text-lg">{{ description }}</p>

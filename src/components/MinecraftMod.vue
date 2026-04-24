@@ -26,7 +26,7 @@ defineProps<Props>()
                         <div class="rounded-lg bg-gray-300 size-28 animate-pulse" />
                     </template>
                 </UseImage>
-                <h1 class="text-2xl font-serif">
+                <h1 class="text-2xl">
                     {{ name }}
                 </h1>
             </div>
