@@ -4,7 +4,7 @@ import { blogSchema, featuredProjectSchema, minecraftModSchema } from './content
 
 const featuredProject = defineCollection({
     loader: file('src/contents/projects/featured_projects.json'),
-    schema: featuredProjectSchema,
+    schema: ({ image }) => featuredProjectSchema(image),
 })
 
 const minecraftMod = defineCollection({

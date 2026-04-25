@@ -1,14 +1,17 @@
+import type { ImageFunction } from 'astro:content'
 import { z } from 'astro/zod'
 
-export const featuredProjectSchema = z.object({
-    description: z.string(),
-    image: z.string(),
-    tags: z.array(z.string()),
-    releaseYear: z.number(),
-    url: z.string(),
-})
+export function featuredProjectSchema(image: ImageFunction) {
+    return z.object({
+        description: z.string(),
+        image: image(),
+        tags: z.array(z.string()),
+        releaseYear: z.number(),
+        url: z.string(),
+    })
+}
 
-export type FeaturedProject = z.infer<typeof featuredProjectSchema>
+export type FeaturedProject = z.infer<ReturnType<typeof featuredProjectSchema>>
 
 export const minecraftModSchema = z.object({
     description: z.string(),
