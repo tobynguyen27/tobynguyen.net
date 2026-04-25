@@ -1,12 +1,12 @@
 ---
-import Hero from "@components/Hero.vue"
-import Methodology from "@components/Methodology.vue"
-import Default from "@layouts/Default.astro";
+import Default from '@layouts/Default.astro'
+import About from '@components/About.astro'
+import Separator from '@components/base/Separator.astro'
+import Hero from '@components/Hero.astro'
 ---
 
 <Default title="Toby Nguyen" overrideTitle>
-    <div class="container-lg">
-        <Hero />
-        <Methodology />
-    </div>
+    <Hero />
+    <Separator />
+    <About />
 </Default>

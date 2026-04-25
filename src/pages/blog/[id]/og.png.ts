@@ -1,24 +1,19 @@
-import type { APIRoute } from "astro"
-import OG from "@components/og/BlogOg"
-import { ImageResponse } from "takumi-js/response"; 
-import { getCollection } from "astro:content"
+import type { APIRoute } from 'astro'
+import OG from '@components/og/BlogOg'
+import { getCollection } from 'astro:content'
+import { ImageResponse } from 'takumi-js/response'
 
 export async function getStaticPaths() {
-    const posts = await getCollection("blog")
-    return posts.map(post => ({ params: { id: post.id } }))
+    const posts = await getCollection('blog')
+    return posts.map(post => ({ params: { id: post.id }, props: { post } }))
 }
 
-export const GET = (async ({ params, redirect }) => {
-    const posts = await getCollection("blog")
-    const post = posts.find(post => post.id === params.id)
-
-    if (!post) {
-        return redirect("/404")
-    }
+export const GET = (async ({ props }) => {
+    const { post } = props
 
     return new ImageResponse(OG({ title: post.data.title, description: post.data.description }), {
         width: 1200,
         height: 630,
-        format: "png",
+        format: 'png',
     })
 }) satisfies APIRoute

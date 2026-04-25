@@ -1,35 +1,29 @@
 ---
-import FeaturedProject from "@components/FeaturedProject.vue"
-import MinecraftMod from "@components/MinecraftMod.vue"
-import Default from "@layouts/Default.astro"
-import { getCollection } from "astro:content"
+import Default from '@layouts/Default.astro'
+import { getCollection } from 'astro:content'
+import FeaturedProject from '@components/FeaturedProject.astro'
+import MinecraftMod from '@components/MinecraftMod.astro'
 
-const featuredProjects = await getCollection("featuredProject")
-const minecraftMods = await getCollection("minecraftMod")
+const featuredProjects = await getCollection('featuredProject')
+const minecraftMods = await getCollection('minecraftMod')
 ---
 
 <Default title="Projects">
-    <div class="container-lg mb-24 mt-36 space-y-32">
+    <div class="container-lg my-36 space-y-32">
+        <div class="space-y-12">
+            <h1 class="text-5xl">Featured Projects</h1>
+
+            <div>
+                {featuredProjects.map(({ id, data }) => <FeaturedProject name={id} {...data} />)}
+            </div>
+        </div>
 
         <div class="space-y-12">
-            <h1 class="text-6xl">Featured Projects</h1>
-
-            <div class="">
-                {
-                    featuredProjects.map(it => <FeaturedProject name={it.id} description={it.data.description} image={it.data.image} tags={it.data.tags} releaseYear={it.data.releaseYear} />)
-                }
-            </div>
-       </div>
-
-       <div class="space-y-12">
-            <h1 class="text-6xl">Minecraft Mods</h1>
+            <h1 class="text-5xl">Minecraft Mods</h1>
 
             <div class="gap-8 grid grid-cols-1 lg:grid-cols-2">
-                {
-                    minecraftMods.map(it => <MinecraftMod name={it.id} description={it.data.description} icon={it.data.icon} curseforge={it.data.curseforge} modrinth={it.data.modrinth} github={it.data.github} client:visible />)
-                }
+                {minecraftMods.map(({ id, data }) => <MinecraftMod name={id} {...data} />)}
             </div>
-       </div>
-
+        </div>
     </div>
 </Default>

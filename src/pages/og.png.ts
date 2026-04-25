@@ -1,0 +1,14 @@
+import type { APIRoute } from 'astro'
+import OG from '@components/og/DefaultOg'
+import { ImageResponse } from 'takumi-js/response'
+
+export const GET = (async () => {
+    return new ImageResponse(
+        OG(),
+        {
+            width: 1200,
+            height: 630,
+            format: 'png',
+        },
+    )
+}) satisfies APIRoute

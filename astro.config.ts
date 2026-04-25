@@ -1,37 +1,34 @@
-import MDX from "@astrojs/mdx"
-import React from "@astrojs/react"
-import sitemap from "@astrojs/sitemap"
-import Vue from "@astrojs/vue"
-import { defineConfig } from "astro/config"
-import UnoCSS from "unocss/astro"
+import MDX from '@astrojs/mdx'
+import Sitemap from '@astrojs/sitemap'
+import { defineConfig } from 'astro/config'
+import UnoCSS from 'unocss/astro'
 
 export default defineConfig({
-    integrations: [UnoCSS(), Vue(), MDX(), sitemap(), React()],
+    integrations: [UnoCSS(), MDX(), Sitemap()],
+
+    site: 'https://tobynguyen.net',
+    output: 'static',
 
     markdown: {
         shikiConfig: {
             themes: {
-                light: "catppuccin-latte",
-                dark: "catppuccin-mocha",
+                light: 'catppuccin-latte',
+                dark: 'catppuccin-mocha',
             },
         },
     },
-
-    site: "https://tobynguyen.net",
-    output: "static",
-
-    server: { port: 5173 },
-
-    vite: {
-        optimizeDeps: {
-            exclude: ["@takumi-rs/core"],
-        },
-        ssr: {
-            external: ["@takumi-rs/core"],
-        },
+    image: {
+        domains: ['codeberg.org'],
     },
-
     experimental: {
         rustCompiler: true,
+    },
+    vite: {
+        optimizeDeps: {
+            exclude: ['@takumi-rs/core'],
+        },
+        ssr: {
+            external: ['@takumi-rs/core'],
+        },
     },
 })

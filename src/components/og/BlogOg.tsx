@@ -1,4 +1,4 @@
-export default function BlogOg({
+export default function Blog({
     title,
     description,
 }: {

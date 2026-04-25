@@ -1,53 +1,49 @@
 ---
-import type { CollectionEntry } from "astro:content"
-import CopyLink from "@components/CopyLink.vue"
-import Blog from "@layouts/Blog.astro"
-import { getCollection, render } from "astro:content"
-import { format } from "date-fns"
-import readingTime from "reading-time"
+import type { CollectionEntry } from 'astro:content'
+import Blog from '@layouts/Blog.astro'
+import { getCollection, render } from 'astro:content'
+import { format } from 'date-fns'
+import readingTime from 'reading-time'
 
 export async function getStaticPaths() {
-    const blog = await getCollection("blog")
+    const blog = await getCollection('blog')
 
-    return blog.map((post) => {
-        return {
-            params: { id: post.id },
-            props: { post },
-        }
-    })
+    return blog.map((post) => ({
+        params: { id: post.id },
+        props: { post },
+    }))
 }
 
 type Props = {
-    post: CollectionEntry<"blog">
+    post: CollectionEntry<'blog'>
 }
 
 const { post } = Astro.props
 
 const { Content } = await render(post)
-const pubDate = format(post.data.pubDate, "MMMM d, yyyy")
-const readingMins = Math.round(readingTime(post.body || "").minutes)
+const pubDate = format(post.data.pubDate, 'MMMM d, yyyy')
+const readingMins = Math.round(readingTime(post.body || '').minutes)
 ---
 
 <Blog title={post.data.title} description={post.data.description} {pubDate}>
-    <div class="container-lg mb-24 mt-36">
+    <div class="container-lg my-36 space-y-12">
         <div class="gap-5" flex="~ col">
+            <h1 class="text-5xl text-center font-semibold">
+                {post.data.title}
+            </h1>
             <div class="flex flex-row gap-3 items-center justify-center lg:gap-5">
                 <p class="text-muted font-mono">
                     {pubDate}
                 </p>
                 <span class="text-muted">•</span>
                 <div class="text-muted font-mono flex flex-row gap-1 items-center justify-center">
-                    <i class="i-solar-stopwatch-linear"></i> <p>{readingMins} mins read</p>
+                    <i class="i-solar-stopwatch-linear"></i>
+                    <p>{readingMins} mins read</p>
                 </div>
-                <span class="text-muted hidden sm:block">•</span>
-                <div class="hidden sm:block"><CopyLink content={Astro.url.href} client:load /></div>
             </div>
-            <h1 class="text-5xl font-serif text-center">
-                {post.data.title}
-            </h1>
         </div>
         <article
-            class="mx-auto prose prose-base marker:text-gray-1000 prose-a:text-blue-700 prose-headings:font-serif prose-td:(p-2 border border-default) prose-th:(p-2 border border-default) prose-a:decoration-none prose-table:border-collapse lg:prose-lg xl:prose-xl dark:prose-invert hover:prose-a:text-blue-800 hover:prose-a:decoration-underline"
+            class="mx-auto prose prose-base marker:text-gray-1000 prose-a:text-blue-700 prose-headings:font-medium prose-td:(p-2 border border-default) prose-th:(p-2 border border-default) prose-a:decoration-none prose-table:border-collapse lg:prose-lg xl:prose-xl dark:prose-invert hover:prose-a:text-blue-800 hover:prose-a:decoration-underline"
         >
             <Content />
         </article>

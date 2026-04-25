@@ -2,32 +2,30 @@
     {
         "id": "Astral Generators",
         "description": "A Minecraft mod that I made for a Create: Astral, a Minecraft modpack. Designed to add more new generators and crafting recipes to the game.",
-        "icon": "https://cdn.jsdelivr.net/gh/tobynguyen27/astral-generators@main/src/main/resources/assets/astralgenerators/icon.png",
+        "icon": "https://codeberg.org/tobynguyen/astral-generators/raw/commit/df361d995f571fb011b51c3ba2758a91da8156f2/src/main/resources/assets/astralgenerators/icon.png",
         "curseforge": "https://www.curseforge.com/minecraft/mc-mods/astral-generators-for-create-astral",
-        "github": "https://github.com/tobynguyen27/astral-generators"
+        "codeberg": "https://github.com/tobynguyen27/astral-generators"
     },
     {
         "id": "CodeBebeLib",
         "description": "A fork of a Minecraft library mod named CodeChickenLib for Fabric.",
         "curseforge": "https://www.curseforge.com/minecraft/mc-mods/codebebelib",
-        "icon": "https://cdn.jsdelivr.net/gh/tobynguyen27/CodeBebeLib@main/src/main/resources/assets/codebebelib/icon.png",
-        "github": "https://github.com/tobynguyen27/CodeBebeLib"
+        "icon": "https://codeberg.org/tobynguyen/codebebelib/raw/commit/060c18ff02f09d29339e00b7b7c820e18e213f52/src/main/resources/assets/codebebelib/icon.png",
+        "codeberg": "https://github.com/tobynguyen27/CodeBebeLib"
     },
-
     {
         "id": "Dangerous Glass",
         "description": "A Minecraft mod that adds new mechanism to glass blocks in Minecraft, players will be poisoned and blinded for a few seconds when standing near and breaking them",
-        "curseforge": "https://modrinth.com/mod/dangerousglass",
-        "icon": "https://cdn.jsdelivr.net/gh/tobynguyen27/DangerousGlass@main/src/main/resources/assets/logo.png",
-        "github": "https://github.com/tobynguyen27/DangerousGlass",
+        "icon": "https://codeberg.org/tobynguyen/dangerous-glass/raw/commit/11aa2b95d4869ac2569343797a975b8d33ceb196/src/main/resources/assets/logo.png",
+        "codeberg": "https://codeberg.org/tobynguyen/dangerous-glass",
         "modrinth": "https://modrinth.com/mod/dangerousglass"
     },
     {
         "id": "Sense",
         "description": "A Minecraft mod library designed to simplify mod development. It offers a collection of utilities, enabling developers to create mods more efficiently with cleaner, more concise code.",
         "curseforge": "https://github.com/tobynguyen27/Sense",
-        "icon": "https://cdn.jsdelivr.net/gh/tobynguyen27/Sense@main/src/main/resources/assets/sense/icon.png",
-        "github": "https://github.com/tobynguyen27/Sense",
+        "icon": "https://codeberg.org/tobynguyen/sense/raw/commit/b3c859b49647ee74c6cbdaad4788289dfa05b359/src/main/resources/assets/sense/icon.png",
+        "codeberg": "https://codeberg.org/tobynguyen/sense",
         "modrinth": "https://modrinth.com/mod/sense"
     }
 ]

@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets'
+import type { MinecraftMod } from '../contents/schema'
+import Link from './base/Link.astro'
+
+type Props = MinecraftMod & {
+    name: string
+}
+
+const { name, description, icon, codeberg, curseforge, modrinth } = Astro.props
+---
+
+<div border="~ default" class="flex flex-col p-8 gap-5 justify-between">
+    <div class="space-y-5">
+        <div class="gap-5 items-center flex flex-row">
+            <Image src={icon} alt="icon" inferSize class="rounded-lg size-28" />
+
+            <h1 class="text-2xl">
+                {name}
+            </h1>
+        </div>
+        <div class="text-muted">
+            <p>{description}</p>
+        </div>
+    </div>
+    <div class="flex flex-row gap-3 items-center justify-start">
+        {
+            codeberg && (
+                <Link class="group p-1" to={codeberg} external>
+                    <i class="i-simple-icons:codeberg text-muted duration-200 group-hover:text-default" />
+                </Link>
+            )
+        }
+        {
+            curseforge && (
+                <Link class="group p-1" to={curseforge} external>
+                    <i class="i-simple-icons:curseforge group-hover:text-curseforge text-muted duration-200" />
+                </Link>
+            )
+        }
+        {
+            modrinth && (
+                <Link class="group p-1" to={modrinth} external>
+                    <i class="i-simple-icons:modrinth hover:text-modrinth text-muted duration-200" />
+                </Link>
+            )
+        }
+    </div>
+</div>

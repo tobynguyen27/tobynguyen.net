@@ -2,8 +2,9 @@
     {
         "id": "Solitar",
         "description": "An open-source URL shortening and QR code generator tool focused on speed and privacy.",
-        "image": "solitar.png",
+        "image": "images/solitar.png",
         "releaseYear": 2026,
-        "tags": ["NuxtJS", "UnoCSS", "SpringBoot", "Turborepo"]
+        "tags": ["NuxtJS", "UnoCSS", "SpringBoot", "Turborepo"],
+        "url": "https://solitar.link"
     }
 ]

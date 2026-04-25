@@ -1,0 +1,46 @@
+---
+import Logo from './Logo.astro'
+import ThemeToggle from './ThemeToggle.astro'
+
+type NavbarItem = {
+    path: string
+    name: string
+    icon: string
+}
+
+const items: NavbarItem[] = [
+    { path: '/', name: 'Home', icon: 'i-lucide-house' },
+    { path: '/blog', name: 'Blog', icon: 'i-ri-article-line' },
+    { path: '/projects', name: 'Projects', icon: 'i-lucide-box' },
+]
+
+const currentPath = `/${Astro.url.pathname.split('/')[1]}`
+---
+
+<header class="bg-base w-full top-0 fixed z-10" border-b="~ default">
+    <nav class="container-lg py-5 gap-3 items-center justify-between flex flex-col sm:flex-row">
+        <a href="/" aria-label="Home"><Logo /></a>
+        <ul class="gap-8 items-center flex flex-row">
+            {
+                items.map(({ path, name, icon }) => (
+                    <li>
+                        <a
+                            href={path}
+                            class={`hidden sm:block ${currentPath === path ? 'line-through' : 'hover:line-through'} uppercase`}
+                        >
+                            {name}
+                        </a>
+                        <a
+                            href={path}
+                            class={`block sm:hidden ${currentPath === path ? 'text-default' : 'text-muted hover:text-default'}`}
+                            aria-label={name}
+                        >
+                            <i class={`${icon}`} />
+                        </a>
+                    </li>
+                ))
+            }
+            <li><ThemeToggle /></li>
+        </ul>
+    </nav>
+</header>

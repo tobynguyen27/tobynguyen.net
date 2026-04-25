@@ -1,9 +1,19 @@
-import { z } from "astro/zod"
+import { z } from 'astro/zod'
+
+export const featuredProjectSchema = z.object({
+    description: z.string(),
+    image: z.string(),
+    tags: z.array(z.string()),
+    releaseYear: z.number(),
+    url: z.string(),
+})
+
+export type FeaturedProject = z.infer<typeof featuredProjectSchema>
 
 export const minecraftModSchema = z.object({
     description: z.string(),
     icon: z.string(),
-    github: z.string().optional(),
+    codeberg: z.string().optional(),
     modrinth: z.string().optional(),
     curseforge: z.string().optional(),
 })
@@ -15,12 +25,3 @@ export const blogSchema = z.object({
     description: z.string(),
     pubDate: z.coerce.date(),
 })
-
-export const featuredProjectSchema = z.object({
-    description: z.string(),
-    image: z.string(),
-    tags: z.array(z.string()),
-    releaseYear: z.number(),
-})
-
-export type FeaturedProject = z.infer<typeof featuredProjectSchema>

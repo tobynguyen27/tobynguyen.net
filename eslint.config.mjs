@@ -1,19 +1,20 @@
-import antfu from "@antfu/eslint-config"
+import antfu from '@antfu/eslint-config'
 
 export default antfu({
-    type: "app",
+    type: 'app',
 
     gitignore: true,
 
     stylistic: {
         indent: 4,
-        quotes: "double",
+        quotes: 'single',
     },
     formatters: {
         css: true,
-        astro: true
+        astro: true,
     },
 
+    pnpm: false,
     vue: true,
     typescript: true,
     astro: true,
@@ -22,7 +23,7 @@ export default antfu({
     jsonc: true,
     yaml: {
         overrides: {
-            "yaml/indent": ["error", 2],
+            'yaml/indent': ['error', 2],
         },
     },
 })
