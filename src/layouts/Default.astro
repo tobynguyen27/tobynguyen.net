@@ -14,7 +14,7 @@ type Props = {
     description?: string
 }
 
-const { overrideTitle = false, description = '', ...props } = Astro.props
+const { overrideTitle = false, description = "Toby Nguyen's personal website", ...props } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const title = overrideTitle ? props.title : `${props.title} - Toby Nguyen`
 
