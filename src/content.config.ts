@@ -13,7 +13,7 @@ const minecraftMod = defineCollection({
 })
 
 const blog = defineCollection({
-    loader: glob({ base: 'src/contents/blog/', pattern: '**/*.mdx' }),
+    loader: glob({ base: 'src/contents/blog/', pattern: ['**/*.mdx', '**/*.md'] }),
     schema: blogSchema,
 })
 

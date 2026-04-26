@@ -12,6 +12,7 @@ export default antfu({
     formatters: {
         css: true,
         astro: true,
+        markdown: true,
     },
 
     pnpm: false,

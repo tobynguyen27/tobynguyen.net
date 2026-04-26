@@ -1,6 +1,6 @@
 .prose blockquote {
     border-left: 0.25rem solid var(--gray-500);
-    quotes: "\201C" "\201D" "\2018" "\2019";
+    quotes: '\201C' '\201D' '\2018' '\2019';
     font-weight: 500;
     font-style: italic;
 }
@@ -21,11 +21,11 @@
 }
 
 .prose :not(pre) > code::before {
-    content: "";
+    content: '';
 }
 
 .prose :not(pre) > code::after {
-    content: "";
+    content: '';
 }
 
 .prose :where(tr):not(:where(.not-prose, .not-prose *)):nth-child(2n) {
