@@ -3,7 +3,6 @@ import {
     presetAttributify,
     presetIcons,
     presetTypography,
-    presetWebFonts,
     presetWind4,
     transformerVariantGroup,
 } from 'unocss'
@@ -48,10 +47,6 @@ function generateBorderClasses(): Record<string, string> {
 export default defineConfig({
     presets: [
         presetWind4({ preflights: { reset: true } }),
-        presetWebFonts({
-            provider: 'fontsource',
-            fonts: { mono: 'Geist Mono', sans: 'Geist', serif: 'IBM Plex Serif' },
-        }),
         presetIcons({
             extraProperties: {
                 'display': 'inline-block',
@@ -66,6 +61,11 @@ export default defineConfig({
     transformers: [transformerVariantGroup()],
     theme: {
         colors,
+        font: {
+            serif: 'var(--font-erode)',
+            mono: 'var(--font-geist-mono)',
+            sans: 'var(--font-geist)',
+        },
     },
     shortcuts: {
         ...generateBorderClasses(),
