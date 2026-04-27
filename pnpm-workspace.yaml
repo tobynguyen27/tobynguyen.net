@@ -1,3 +1,5 @@
+shellEmulator: true
+
 allowBuilds:
   esbuild: true
   sharp: true
@@ -9,7 +11,7 @@ catalogs:
     '@astrojs/mdx': ^5.0.4
     '@astrojs/sitemap': ^3.7.2
     '@astrojs/vue': ^6.0.1
-    '@iconify/json': ^2.2.466
+    '@iconify/json': ^2.2.467
     '@unocss/astro': ^66.6.8
     astro: ^6.1.9
     astro-seo: ^1.1.0
@@ -36,4 +38,3 @@ catalogs:
   types:
     '@types/react': ^19.2.14
     '@types/react-dom': ^19.2.3
-shellEmulator: true
