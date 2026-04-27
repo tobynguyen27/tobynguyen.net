@@ -61,7 +61,7 @@ const openGraph: SEOProps['openGraph'] = {
         type: 'website',
         url: canonicalURL,
         title,
-        image: joinURL(Astro.site!!.toString(), 'og.png'),
+        image: joinURL(Astro.site!.toString(), 'og.png'),
     },
     optional: { description, siteName: 'Toby Nguyen' },
 }
