@@ -55,7 +55,10 @@ const { name, description, icon, codeberg, curseforge, modrinth } = Astro.props
         {
             modrinth && (
                 <Link class="group p-1" to={modrinth} external aria-label={`${name} on Modrinth`}>
-                    <i class="i-simple-icons:modrinth hover:text-modrinth text-muted duration-200" aria-hidden="true" />
+                    <i
+                        class="i-simple-icons:modrinth group-hover:text-modrinth text-muted duration-200"
+                        aria-hidden="true"
+                    />
                 </Link>
             )
         }
