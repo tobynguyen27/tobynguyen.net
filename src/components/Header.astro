@@ -6,13 +6,14 @@ type NavbarItem = {
     path: string
     name: string
     icon: string
+    iconOnly?: boolean
 }
 
 const items: NavbarItem[] = [
     { path: '/', name: 'Home', icon: 'i-lucide-house' },
     { path: '/blog', name: 'Blog', icon: 'i-ri-article-line' },
     { path: '/projects', name: 'Projects', icon: 'i-lucide-box' },
-    { path: '/feed.xml', name: 'RSS', icon: 'i-lucide-rss' },
+    { path: '/feed.xml', name: 'RSS', icon: 'i-lucide-rss', iconOnly: true },
 ]
 
 const currentPath = `/${Astro.url.pathname.split('/')[1]}`
@@ -23,23 +24,26 @@ const currentPath = `/${Astro.url.pathname.split('/')[1]}`
         <a href="/" aria-label="Home"><Logo /></a>
         <ul class="gap-8 items-center flex flex-row">
             {
-                items.map(({ path, name, icon }) => (
-                    <li>
-                        <a
-                            href={path}
-                            class={`hidden sm:block ${currentPath === path ? 'line-through' : 'hover:line-through'} uppercase`}
-                        >
-                            {name}
-                        </a>
-                        <a
-                            href={path}
-                            class={`block sm:hidden ${currentPath === path ? 'text-default' : 'text-muted hover:text-default'}`}
-                            aria-label={name}
-                        >
-                            <i class={`${icon}`} />
-                        </a>
-                    </li>
-                ))
+                items.map(({ path, name, icon, iconOnly = false }) => {
+                    const isActive = currentPath === path
+                    return (
+                        <li>
+                            <a
+                                href={path}
+                                aria-label={name}
+                                class:list={[
+                                    'sm:text-inherit',
+                                    isActive ? 'text-default' : 'text-muted hover:text-default',
+                                    !iconOnly && 'sm:uppercase',
+                                    !iconOnly && (isActive ? 'sm:line-through' : 'sm:hover:line-through'),
+                                ]}
+                            >
+                                <i class:list={[icon, !iconOnly && 'sm:hidden']} />
+                                {!iconOnly && <span class="hidden sm:inline">{name}</span>}
+                            </a>
+                        </li>
+                    )
+                })
             }
             <li><ThemeToggle /></li>
         </ul>
