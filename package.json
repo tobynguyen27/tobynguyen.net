@@ -21,6 +21,7 @@
         "@antfu/eslint-config": "catalog:lint",
         "@astrojs/compiler-rs": "catalog:dev",
         "@astrojs/mdx": "catalog:dev",
+        "@astrojs/partytown": "catalog:dev",
         "@astrojs/rss": "catalog:dev",
         "@astrojs/sitemap": "catalog:dev",
         "@iconify/json": "catalog:dev",

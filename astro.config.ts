@@ -1,10 +1,11 @@
 import MDX from '@astrojs/mdx'
+import PartyTown from '@astrojs/partytown'
 import Sitemap from '@astrojs/sitemap'
 import { defineConfig, fontProviders } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 
 export default defineConfig({
-    integrations: [UnoCSS(), MDX(), Sitemap()],
+    integrations: [UnoCSS(), MDX(), Sitemap(), PartyTown()],
 
     site: 'https://tobynguyen.net',
     output: 'static',
