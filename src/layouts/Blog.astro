@@ -1,7 +1,7 @@
 ---
 import { SEO } from 'astro-seo'
 import type { Link, Meta, SEOProps } from 'astro-seo'
-import { joinURL } from 'ufo'
+import { joinURL, resolveURL } from 'ufo'
 import { Font } from 'astro:assets'
 
 import Footer from '@components/Footer.astro'
@@ -54,6 +54,12 @@ const link: Partial<Link>[] = [
         sizes: '180x180',
         href: '/dark-apple-touch-icon.png',
         media: '(prefers-color-scheme: dark)',
+    },
+    {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: 'Toby Nguyen',
+        href: resolveURL(Astro.site?.toString(), 'feed.xml'),
     },
 ]
 
