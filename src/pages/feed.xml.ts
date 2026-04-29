@@ -12,18 +12,27 @@ export async function GET(context: APIContext) {
     const siteURL = context.site!.toString()
 
     const channelMeta = builder.build({
-        language: 'en-us',
-        copyright: 'CC BY-NC 4.0 © Toby Nguyen',
-        managingEditor: 'Toby Nguyen (hi@tobynguyen.net)',
-        webMaster: 'Toby Nguyen (hi@tobynguyen.net)',
-        image: {
+        'language': 'en-us',
+        'copyright': 'CC BY-NC 4.0 © Toby Nguyen',
+        'managingEditor': 'hi@tobynguyen.net (Toby Nguyen)',
+        'webMaster': 'hi@tobynguyen.net (Toby Nguyen)',
+        'image': {
             url: resolveURL(siteURL, 'avatar.png'),
             link: siteURL,
             title: 'Toby Nguyen',
         },
+        'atom:link': {
+            '@_href': resolveURL(siteURL, 'feed.xml'),
+            '@_rel': 'self',
+            '@_type': 'application/rss+xml',
+        },
     })
 
     return rss({
+        xmlns: {
+            atom: 'http://www.w3.org/2005/Atom',
+        },
+
         title: `Toby Nguyen`,
         description: `Toby Nguyen's Blog`,
         site: context.site!,
@@ -34,7 +43,7 @@ export async function GET(context: APIContext) {
                 pubDate: post.data.pubDate,
                 description: post.data.description,
                 link: resolveURL('/blog', post.id),
-                author: 'Toby Nguyen',
+                author: 'hi@tobynguyen.net (Toby Nguyen)',
             } satisfies RSSFeedItem)),
         customData: channelMeta,
     })
