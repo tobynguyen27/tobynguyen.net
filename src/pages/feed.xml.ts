@@ -5,9 +5,8 @@ import { getCollection } from 'astro:content'
 import XMLBuilder from 'fast-xml-builder'
 import { resolveURL } from 'ufo'
 
-const builder = new XMLBuilder()
-
 export async function GET(context: APIContext) {
+    const builder = new XMLBuilder()
     const blog = await getCollection('blog')
     const siteURL = context.site!.toString()
 
