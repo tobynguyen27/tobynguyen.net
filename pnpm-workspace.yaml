@@ -14,7 +14,7 @@ catalogs:
     '@astrojs/vue': ^6.0.1
     '@iconify/json': ^2.2.467
     '@unocss/astro': ^66.6.8
-    astro: ^6.1.9
+    astro: ^6.1.10
     astro-seo: ^1.1.0
     date-fns: ^4.1.0
     fast-xml-builder: ^1.1.5
@@ -28,7 +28,7 @@ catalogs:
     unocss: ^66.6.8
     vis-network: ^10.0.2
     vue: ^3.5.33
-    wrangler: ^4.85.0
+    wrangler: ^4.86.0
   lint:
     '@antfu/eslint-config': ^8.2.0
     '@unocss/eslint-plugin': ^66.6.8
