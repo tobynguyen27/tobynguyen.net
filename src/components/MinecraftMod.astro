@@ -23,9 +23,9 @@ const { name, description, icon, codeberg, curseforge, modrinth } = Astro.props
                 format="avif"
             />
 
-            <h1 class="text-2xl">
+            <h3 class="text-2xl">
                 {name}
-            </h1>
+            </h3>
         </div>
         <div class="text-muted">
             <p>{description}</p>
@@ -34,22 +34,28 @@ const { name, description, icon, codeberg, curseforge, modrinth } = Astro.props
     <div class="flex flex-row gap-3 items-center justify-start">
         {
             codeberg && (
-                <Link class="group p-1" to={codeberg} external>
-                    <i class="i-simple-icons:codeberg text-muted duration-200 group-hover:text-default" />
+                <Link class="group p-1" to={codeberg} external aria-label={`${name} on Codeberg`}>
+                    <i
+                        class="i-simple-icons:codeberg text-muted duration-200 group-hover:text-default"
+                        aria-hidden="true"
+                    />
                 </Link>
             )
         }
         {
             curseforge && (
-                <Link class="group p-1" to={curseforge} external>
-                    <i class="i-simple-icons:curseforge group-hover:text-curseforge text-muted duration-200" />
+                <Link class="group p-1" to={curseforge} external aria-label={`${name} on CurseForge`}>
+                    <i
+                        class="i-simple-icons:curseforge group-hover:text-curseforge text-muted duration-200"
+                        aria-hidden="true"
+                    />
                 </Link>
             )
         }
         {
             modrinth && (
-                <Link class="group p-1" to={modrinth} external>
-                    <i class="i-simple-icons:modrinth hover:text-modrinth text-muted duration-200" />
+                <Link class="group p-1" to={modrinth} external aria-label={`${name} on Modrinth`}>
+                    <i class="i-simple-icons:modrinth hover:text-modrinth text-muted duration-200" aria-hidden="true" />
                 </Link>
             )
         }

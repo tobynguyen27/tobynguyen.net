@@ -10,8 +10,12 @@ const minecraftMods = await getCollection('minecraftMod')
 
 <Default title="Projects">
     <div class="container-lg my-36 space-y-32">
+        <div class="space-y-5">
+            <h1 class="text-5xl">Projects</h1>
+        </div>
+
         <div class="space-y-12">
-            <h1 class="text-5xl">Featured Projects</h1>
+            <h2 class="text-5xl">Featured Projects</h2>
 
             <div>
                 {featuredProjects.map(({ id, data }) => <FeaturedProject name={id} {...data} />)}
@@ -19,7 +23,7 @@ const minecraftMods = await getCollection('minecraftMod')
         </div>
 
         <div class="space-y-12">
-            <h1 class="text-5xl">Minecraft Mods</h1>
+            <h2 class="text-5xl">Minecraft Mods</h2>
 
             <div class="gap-8 grid grid-cols-1 lg:grid-cols-2">
                 {minecraftMods.map(({ id, data }) => <MinecraftMod name={id} {...data} />)}
