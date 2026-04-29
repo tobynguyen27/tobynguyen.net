@@ -15,7 +15,7 @@ export default antfu({
         markdown: true,
     },
 
-    pnpm: false,
+    pnpm: true,
     vue: true,
     typescript: true,
     astro: true,
