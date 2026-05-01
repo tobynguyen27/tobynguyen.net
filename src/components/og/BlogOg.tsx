@@ -12,7 +12,7 @@ export default function Blog({
                 <span tw="text-white text-6xl font-semibold">
                     {title}
                 </span>
-                <span tw="text-[#a1a1a1] text-4xl">
+                <span tw="text-[#a1a1a1] text-4xl" style={{ fontFamily: 'Geist Mono' }}>
                     {description}
                 </span>
             </div>
