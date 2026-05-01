@@ -75,7 +75,12 @@ const openGraph = {
     article: { publishedTime: pubDate, authors: ['Toby Nguyen'] },
 }
 
-const twitter: SEOProps['twitter'] = { title, site: 'iamtobynguyen', creator: 'iamtobynguyen' }
+const twitter: SEOProps['twitter'] = {
+    title,
+    site: 'iamtobynguyen',
+    creator: 'iamtobynguyen',
+    card: 'summary_large_image',
+}
 ---
 
 <html lang="en">
