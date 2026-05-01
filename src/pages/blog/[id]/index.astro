@@ -20,9 +20,8 @@ type Props = {
 
 const { post } = Astro.props
 
-const { Content } = await render(post)
+const { Content, remarkPluginFrontmatter } = await render(post)
 const pubDate = format(post.data.pubDate, 'MMMM d, yyyy')
-const readingMins = Math.round(readingTime(post.body || '').minutes)
 ---
 
 <Blog title={post.data.title} description={post.data.description} {pubDate}>
@@ -37,7 +36,7 @@ const readingMins = Math.round(readingTime(post.body || '').minutes)
                 </p>
                 <span class="text-muted">•</span>
                 <div class="text-muted font-mono">
-                    <p>{readingMins} mins read</p>
+                    <p>{remarkPluginFrontmatter.readingTimeInMin} mins read</p>
                 </div>
             </div>
         </div>

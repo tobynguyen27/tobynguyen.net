@@ -19,6 +19,7 @@ catalogs:
     astro-seo: ^1.1.0
     date-fns: ^4.1.0
     fast-xml-builder: ^1.1.5
+    mdast-util-to-string: ^4.0.0
     react: ^19.2.5
     react-dom: ^19.2.5
     reading-time: ^1.5.0
@@ -27,6 +28,7 @@ catalogs:
     taze: ^19.11.0
     ufo: ^1.6.4
     unocss: ^66.6.8
+    vfile: ^6.0.3
     wrangler: ^4.87.0
   lint:
     '@antfu/eslint-config': ^8.2.0
@@ -37,5 +39,6 @@ catalogs:
     eslint-plugin-format: ^2.0.1
     prettier-plugin-astro: ^0.14.1
   types:
+    '@types/mdast': ^4.0.4
     '@types/react': ^19.2.14
     '@types/react-dom': ^19.2.3

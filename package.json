@@ -25,6 +25,7 @@
         "@astrojs/rss": "catalog:dev",
         "@astrojs/sitemap": "catalog:dev",
         "@iconify/json": "catalog:dev",
+        "@types/mdast": "catalog:types",
         "@types/react": "catalog:types",
         "@types/react-dom": "catalog:types",
         "@unocss/astro": "catalog:dev",
@@ -36,6 +37,7 @@
         "eslint-plugin-astro": "catalog:lint",
         "eslint-plugin-format": "catalog:lint",
         "fast-xml-builder": "catalog:dev",
+        "mdast-util-to-string": "catalog:dev",
         "prettier-plugin-astro": "catalog:lint",
         "react": "catalog:dev",
         "react-dom": "catalog:dev",
@@ -45,6 +47,7 @@
         "taze": "catalog:dev",
         "ufo": "catalog:dev",
         "unocss": "catalog:dev",
+        "vfile": "catalog:dev",
         "wrangler": "catalog:dev"
     }
 }
