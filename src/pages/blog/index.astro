@@ -1,12 +1,22 @@
 ---
+import Link from '@components/base/Link.astro'
 import Default from '@layouts/Default.astro'
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 import { format } from 'date-fns'
-import readingTime from 'reading-time'
+import { resolveURL } from 'ufo'
 
-const posts = (await getCollection('blog'))
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-    .map((it) => ({ ...it, readingTime: Math.round(readingTime(it.body || '').minutes) }))
+const posts = await Promise.all(
+    (await getCollection('blog'))
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+        .map(async (post) => {
+            const { remarkPluginFrontmatter } = await render(post)
+
+            return {
+                ...post,
+                readingTime: remarkPluginFrontmatter.readingTimeInMin,
+            }
+        }),
+)
 ---
 
 <Default title="Blog">
@@ -22,8 +32,8 @@ const posts = (await getCollection('blog'))
             {
                 posts.map(({ id, readingTime, data }) => {
                     return (
-                        <a
-                            href={`/blog/${id}`}
+                        <Link
+                            to={resolveURL('/blog', id)}
                             class="group flex flex-col duration-200 space-y-5 hover:opacity-75"
                         >
                             <div class="space-y-3">
@@ -38,7 +48,7 @@ const posts = (await getCollection('blog'))
                                 </div>
                             </div>
                             <p class="text-muted">{data.description}</p>
-                        </a>
+                        </Link>
                     )
                 })
             }
