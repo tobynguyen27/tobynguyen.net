@@ -16,7 +16,7 @@ export default function Default() {
                 <span tw="text-white text-9xl">
                     Toby Nguyen
                 </span>
-                <span tw="text-[#a1a1a1] text-4xl">
+                <span tw="text-[#a1a1a1] text-4xl" style={{ fontFamily: 'Geist Mono' }}>
                     A passionate open source developer. I make softwares for free for everyone.
                 </span>
             </div>
