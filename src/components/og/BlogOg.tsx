@@ -9,7 +9,7 @@ export default function Blog({
         <div tw="bg-black h-full w-full flex flex-col items-start justify-between p-24">
 
             <div tw="flex flex-col gap-8">
-                <span tw="text-white text-6xl font-semibold">
+                <span tw="text-white text-6xl">
                     {title}
                 </span>
                 <span tw="text-[#a1a1a1] text-4xl" style={{ fontFamily: 'Geist Mono' }}>
