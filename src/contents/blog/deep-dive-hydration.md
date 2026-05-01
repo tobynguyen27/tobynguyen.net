@@ -18,11 +18,13 @@ Furthermore, beyond the two factors mentioned above, CSR has additional trade-of
 
 Server-side rendering is the process of building UI on the server. The HTML is computed on the server and sent to the client. The benefit of SSR is that when the browser receives the HTML from the server, the end user sees the application instantly. However, the main drawback of SSR is that the HTML returned by the server is static, so there is no JS interactivity. This is when Hydration comes into play
 
-When computed HTML reaches the browser, the server sends many JavaScript files, and once they arrive, the hydration process starts. The se JS files get executed: the app gets rebuilt again on the client: event listeners get registered, and app states get restored. When these processes finish, the application is hydrated.
+When computed HTML reaches the browser, the server sends many JavaScript files, and once they arrive, the hydration process starts. These JS files get executed: the app gets rebuilt again on the client: event listeners get registered, and app states get restored. When these processes finish, the application is hydrated.
 
 SSR and hydration only happens once, when the user navigates to that page. When the application is hydrating, the website is completely non-interactive, even though it seems like it.
 
-As we can see, JS files get executed twice (server and client). In some situations, this leads us to a hydration mismatch. For example:
+## Hydration mismatch
+
+JS files get executed twice (server and client). In some situations, this leads us to a hydration mismatch. For example:
 
 ```tsx
 export default function Home() {
