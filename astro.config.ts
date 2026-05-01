@@ -1,7 +1,7 @@
 import MDX from '@astrojs/mdx'
 import PartyTown from '@astrojs/partytown'
 import Sitemap from '@astrojs/sitemap'
-import { defineConfig, fontProviders } from 'astro/config'
+import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 
 export default defineConfig({
@@ -39,6 +39,14 @@ export default defineConfig({
     },
     experimental: {
         rustCompiler: true,
+        svgOptimizer: svgoOptimizer({
+            multipass: true,
+            plugins: [
+                {
+                    name: 'preset-default',
+                },
+            ],
+        }),
     },
     vite: {
         optimizeDeps: {
