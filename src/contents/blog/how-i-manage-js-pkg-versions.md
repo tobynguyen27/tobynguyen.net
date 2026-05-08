@@ -14,7 +14,7 @@ The most annoying problem when developing JS projects is the inconsistency of th
 
 ## Categorize dependencies
 
-pnpm has a feature called [catalogs](https://pnpm.io/catalogs), which allows me to share dependency versions across packages. This is really useful for a monorepo. Alternatively, I can use it for a single package to gain some benefits that Anthony Fu has already explained clearly in his post.
+pnpm has a feature called [catalogs](https://pnpm.io/catalogs), which allows me to share dependency versions across packages. This is really useful for a monorepo. Alternatively, I can use it for a single package to gain some [benefits](https://antfu.me/posts/categorize-deps) that Anthony Fu has already explained clearly in his post.
 
 ## Update packages
 
