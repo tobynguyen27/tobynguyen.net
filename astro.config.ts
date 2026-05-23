@@ -1,12 +1,12 @@
 import MDX from '@astrojs/mdx'
 import PartyTown from '@astrojs/partytown'
-import Sitemap from '@astrojs/sitemap'
+import SiteMap from '@astrojs/sitemap'
 import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 import { remarkReadingTime } from './plugins/remark-reading-time'
 
 export default defineConfig({
-    integrations: [UnoCSS(), MDX(), Sitemap(), PartyTown()],
+    integrations: [UnoCSS(), MDX(), SiteMap(), PartyTown()],
 
     site: 'https://tobynguyen.net',
     output: 'static',
