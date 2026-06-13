@@ -12,33 +12,33 @@ catalogs:
     '@astrojs/mdx': ^5.0.6
     '@astrojs/partytown': ^2.1.7
     '@astrojs/rss': ^4.0.18
-    '@astrojs/sitemap': ^3.7.2
-    '@iconify/json': ^2.2.478
-    '@unocss/astro': ^66.7.0
-    astro: ^6.3.7
+    '@astrojs/sitemap': ^3.7.3
+    '@iconify/json': ^2.2.485
+    '@unocss/astro': ^66.7.2
+    astro: ^6.4.6
     astro-seo: ^1.1.0
-    date-fns: ^4.3.0
+    date-fns: ^4.4.0
     fast-xml-builder: ^1.2.0
     mdast-util-to-string: ^4.0.0
-    react: ^19.2.6
-    react-dom: ^19.2.6
+    react: ^19.2.7
+    react-dom: ^19.2.7
     reading-time: ^1.5.0
     sharp: ^0.34.5
-    takumi-js: ^1.4.1
-    taze: ^19.13.0
+    takumi-js: ^1.8.3
+    taze: ^19.14.1
     ufo: ^1.6.4
-    unocss: ^66.7.0
+    unocss: ^66.7.2
     vfile: ^6.0.3
-    wrangler: ^4.94.0
+    wrangler: ^4.100.0
   lint:
     '@antfu/eslint-config': ^8.3.0
-    '@unocss/eslint-plugin': ^66.7.0
+    '@unocss/eslint-plugin': ^66.7.2
     astro-eslint-parser: ^1.4.0
-    eslint: ^10.4.0
+    eslint: ^10.4.1
     eslint-plugin-astro: ^1.7.0
     eslint-plugin-format: ^2.0.1
     prettier-plugin-astro: ^0.14.1
   types:
     '@types/mdast': ^4.0.4
-    '@types/react': ^19.2.15
+    '@types/react': ^19.2.17
     '@types/react-dom': ^19.2.3
