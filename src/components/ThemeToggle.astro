@@ -20,11 +20,7 @@
         return 'light'
     })()
 
-    if (theme === 'light') {
-        document.documentElement.classList.remove('dark')
-    } else {
-        document.documentElement.classList.add('dark')
-    }
+    document.documentElement.classList.toggle('dark', theme !== 'light')
 
     window.localStorage.setItem('theme', theme)
 

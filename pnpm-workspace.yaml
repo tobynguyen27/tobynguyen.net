@@ -1,5 +1,7 @@
-shellEmulator: true
 minimumReleaseAge: 1440
+
+shellEmulator: true
+trustPolicy: no-downgrade
 
 allowBuilds:
   esbuild: true
