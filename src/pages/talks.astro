@@ -15,9 +15,9 @@ const talks = await getCollection('talks')
         <div class="flex flex-col">
             {
                 talks.map((talk) => (
-                    <div class="flex items-center justify-between not-last:(border-b border-b-default) py-8">
+                    <div class="flex flex-col sm:(flex-row items-center) items-start gap-2 justify-between not-last:(border-b border-b-default) py-8">
                         <div class="space-y-1">
-                            <h1 class="text-3xl">{talk.id}</h1>
+                            <h1 class="text-2xl lg:text-4xl md:text-3xl">{talk.id}</h1>
                             <p class="font-mono text-muted">
                                 {format(talk.data.date, 'h:mm a')} &middot; {format(talk.data.date, 'MMMM d, yyyy')}{' '}
                                 &middot; {talk.data.location}
