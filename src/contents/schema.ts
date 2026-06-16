@@ -28,3 +28,11 @@ export const blogSchema = z.object({
     description: z.string(),
     pubDate: z.coerce.date(),
 })
+
+export const talkSchema = z.object({
+    date: z.coerce.date(),
+    location: z.string(),
+    video: z.url().optional(),
+    slides: z.url(),
+    pdf: z.url(),
+})

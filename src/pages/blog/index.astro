@@ -1,5 +1,6 @@
 ---
 import Link from '@components/base/Link.astro'
+import BlogNavBar from '@components/BlogNavBar.astro'
 import Default from '@layouts/Default.astro'
 import { getCollection, render } from 'astro:content'
 import { format } from 'date-fns'
@@ -21,12 +22,7 @@ const posts = await Promise.all(
 
 <Default title="Blog">
     <div class="container-lg my-36 space-y-12">
-        <div class="space-y-5">
-            <h1 class="text-5xl">Blog</h1>
-            <p class="text-xl text-muted">
-                My thoughts on software engineering, gaming and the intersection of humanity and technology.
-            </p>
-        </div>
+        <BlogNavBar currentPath="/blog" />
 
         <div class="gap-12" flex="~ col">
             {
@@ -47,7 +43,7 @@ const posts = await Promise.all(
                                     <p>{readingTime} mins read</p>
                                 </div>
                             </div>
-                            <p class="text-muted">{data.description}</p>
+                            <p class="text-muted text-lg">{data.description}</p>
                         </Link>
                     )
                 })

@@ -1,0 +1,44 @@
+---
+import Link from './base/Link.astro'
+
+type NavBarItem = {
+    name: string
+    path: string
+    description?: string
+}
+
+const items = [
+    {
+        name: 'Blog',
+        path: '/blog',
+        description: 'My thoughts on software engineering, gaming and the intersection of humanity and technology.',
+    },
+    {
+        name: 'Talks',
+        path: '/talks',
+    },
+] as const satisfies NavBarItem[]
+
+type NavBarPath = (typeof items)[number]['path']
+
+type Props = {
+    currentPath: NavBarPath
+}
+
+const { currentPath } = Astro.props
+---
+
+<nav>
+    <div class="flex gap-5">
+        {
+            items.map((item) => (
+                <Link to={item.path}>
+                    <p class:list={['text-5xl', currentPath === item.path ? 'text-default' : 'text-muted']}>
+                        {item.name}
+                    </p>
+                </Link>
+            ))
+        }
+    </div>
+    <div class=""></div>
+</nav>

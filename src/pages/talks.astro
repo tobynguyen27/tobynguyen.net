@@ -1,0 +1,50 @@
+---
+import Link from '@components/base/Link.astro'
+import BlogNavBar from '@components/BlogNavBar.astro'
+import Default from '@layouts/Default.astro'
+import { getCollection } from 'astro:content'
+import { format } from 'date-fns'
+
+const talks = await getCollection('talks')
+---
+
+<Default title="Talks">
+    <div class="container-lg my-36 space-y-12">
+        <BlogNavBar currentPath="/talks" />
+
+        <div class="flex flex-col">
+            {
+                talks.map((talk) => (
+                    <div class="flex items-center justify-between not-last:(border-b border-b-default) py-8">
+                        <div class="space-y-1">
+                            <h1 class="text-3xl">{talk.id}</h1>
+                            <p class="font-mono text-muted">
+                                {format(talk.data.date, 'h:mm a')} &middot; {format(talk.data.date, 'MMMM d, yyyy')}{' '}
+                                &middot; {talk.data.location}
+                            </p>
+                        </div>
+                        <ul class="flex items-center justify-center gap-5">
+                            {talk.data.video && (
+                                <li class="text-muted hover:text-default">
+                                    <Link to={talk.data.video} external class="flex items-center justify-center gap-1">
+                                        <div class="i-carbon:play" /> Watch
+                                    </Link>
+                                </li>
+                            )}
+                            <li class="text-muted hover:text-default">
+                                <Link to={talk.data.slides} external class="flex items-center justify-center gap-1">
+                                    <div class="i-ri:presentation-fill" /> Slides
+                                </Link>
+                            </li>
+                            <li class="text-muted hover:text-default">
+                                <Link to={talk.data.pdf} external class="flex items-center justify-center gap-1">
+                                    <div class="i-carbon:document-pdf" /> PDF
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</Default>

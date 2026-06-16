@@ -1,6 +1,6 @@
 import { file, glob } from 'astro/loaders'
 import { defineCollection } from 'astro:content'
-import { blogSchema, featuredProjectSchema, minecraftModSchema } from './contents/schema'
+import { blogSchema, featuredProjectSchema, minecraftModSchema, talkSchema } from './contents/schema'
 
 const featuredProject = defineCollection({
     loader: file('src/contents/projects/featured_projects.json'),
@@ -17,4 +17,9 @@ const blog = defineCollection({
     schema: blogSchema,
 })
 
-export const collections = { featuredProject, minecraftMod, blog }
+const talks = defineCollection({
+    loader: file('src/contents/talks.json'),
+    schema: talkSchema,
+})
+
+export const collections = { featuredProject, minecraftMod, blog, talks }
