@@ -20,6 +20,7 @@
     "devDependencies": {
         "@antfu/eslint-config": "catalog:lint",
         "@astrojs/compiler-rs": "catalog:dev",
+        "@astrojs/markdown-remark": "^7.2.0",
         "@astrojs/mdx": "catalog:dev",
         "@astrojs/partytown": "catalog:dev",
         "@astrojs/rss": "catalog:dev",

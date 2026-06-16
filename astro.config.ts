@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark'
 import MDX from '@astrojs/mdx'
 import PartyTown from '@astrojs/partytown'
 import SiteMap from '@astrojs/sitemap'
@@ -34,7 +35,9 @@ export default defineConfig({
                 dark: 'catppuccin-mocha',
             },
         },
-        remarkPlugins: [remarkReadingTime],
+        processor: unified({
+            remarkPlugins: [remarkReadingTime],
+        }),
     },
     image: {
         domains: ['codeberg.org'],
