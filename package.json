@@ -15,7 +15,11 @@
         "up": "taze"
     },
     "dependencies": {
-        "astro": "catalog:build"
+        "astro-seo": "catalog:frontend",
+        "date-fns": "catalog:frontend",
+        "react": "catalog:frontend",
+        "react-dom": "catalog:frontend",
+        "ufo": "catalog:frontend"
     },
     "devDependencies": {
         "@antfu/eslint-config": "catalog:lint",
@@ -32,24 +36,21 @@
         "@types/react-dom": "catalog:types",
         "@unocss/astro": "catalog:dev",
         "@unocss/eslint-plugin": "catalog:lint",
+        "astro": "catalog:build",
         "astro-eslint-parser": "catalog:lint",
         "astro-oxidized-image": "catalog:build",
-        "astro-seo": "catalog:dev",
-        "date-fns": "catalog:dev",
         "eslint": "catalog:lint",
         "eslint-plugin-astro": "catalog:lint",
         "eslint-plugin-format": "catalog:lint",
         "fast-xml-builder": "catalog:dev",
         "mdast-util-to-string": "catalog:dev",
         "prettier-plugin-astro": "catalog:lint",
-        "react": "catalog:dev",
-        "react-dom": "catalog:dev",
         "reading-time": "catalog:dev",
+        "sharp": "catalog:build",
         "takumi-js": "catalog:dev",
-        "taze": "catalog:dev",
-        "ufo": "catalog:dev",
-        "unocss": "catalog:dev",
+        "taze": "catalog:scripts",
+        "unocss": "catalog:build",
         "vfile": "catalog:dev",
-        "wrangler": "catalog:dev"
+        "wrangler": "catalog:build"
     }
 }

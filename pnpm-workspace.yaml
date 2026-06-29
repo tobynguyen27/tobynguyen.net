@@ -23,22 +23,23 @@ catalogs:
     '@napi-rs/image': ^1.14.0
     astro: ^7.0.3
     astro-oxidized-image: ^1.0.0-alpha
+    sharp: ^0.35.2
+    unocss: ^66.7.3
+    wrangler: ^4.105.0
   dev:
     '@iconify/json': ^2.2.492
     '@unocss/astro': ^66.7.3
-    astro-seo: ^1.1.0
-    date-fns: ^4.4.0
     fast-xml-builder: ^1.2.0
     mdast-util-to-string: ^4.0.0
-    react: ^19.2.7
-    react-dom: ^19.2.7
     reading-time: ^1.5.0
     takumi-js: ^1.8.7
-    taze: ^19.14.1
-    ufo: ^1.6.4
-    unocss: ^66.7.3
     vfile: ^6.0.3
-    wrangler: ^4.105.0
+  frontend:
+    astro-seo: ^1.1.0
+    date-fns: ^4.4.0
+    react: ^19.2.7
+    react-dom: ^19.2.7
+    ufo: ^1.6.4
   lint:
     '@antfu/eslint-config': ^9.1.0
     '@unocss/eslint-plugin': ^66.7.3
@@ -47,6 +48,8 @@ catalogs:
     eslint-plugin-astro: ^2.1.1
     eslint-plugin-format: ^2.0.1
     prettier-plugin-astro: ^0.14.1
+  scripts:
+    taze: ^19.14.1
   types:
     '@types/mdast': ^4.0.4
     '@types/react': ^19.2.17
