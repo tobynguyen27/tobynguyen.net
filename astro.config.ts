@@ -43,7 +43,6 @@ export default defineConfig({
         domains: ['codeberg.org'],
     },
     experimental: {
-        rustCompiler: true,
         svgOptimizer: svgoOptimizer({
             multipass: true,
             plugins: [

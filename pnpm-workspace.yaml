@@ -12,14 +12,14 @@ allowBuilds:
 
 catalogs:
   dev:
-    '@astrojs/compiler-rs': ^0.1.10
-    '@astrojs/mdx': ^5.0.6
+    '@astrojs/compiler-rs': ^0.2.3
+    '@astrojs/mdx': ^7.0.0
     '@astrojs/partytown': ^2.1.7
     '@astrojs/rss': ^4.0.18
     '@astrojs/sitemap': ^3.7.3
-    '@iconify/json': ^2.2.485
-    '@unocss/astro': ^66.7.2
-    astro: ^6.4.6
+    '@iconify/json': ^2.2.492
+    '@unocss/astro': ^66.7.3
+    astro: ^6.4.8
     astro-seo: ^1.1.0
     date-fns: ^4.4.0
     fast-xml-builder: ^1.2.0
@@ -27,19 +27,19 @@ catalogs:
     react: ^19.2.7
     react-dom: ^19.2.7
     reading-time: ^1.5.0
-    sharp: ^0.34.5
-    takumi-js: ^1.8.3
+    sharp: ^0.35.2
+    takumi-js: ^1.8.7
     taze: ^19.14.1
     ufo: ^1.6.4
-    unocss: ^66.7.2
+    unocss: ^66.7.3
     vfile: ^6.0.3
-    wrangler: ^4.100.0
+    wrangler: ^4.105.0
   lint:
-    '@antfu/eslint-config': ^8.3.0
-    '@unocss/eslint-plugin': ^66.7.2
-    astro-eslint-parser: ^1.4.0
-    eslint: ^10.4.1
-    eslint-plugin-astro: ^1.7.0
+    '@antfu/eslint-config': ^9.1.0
+    '@unocss/eslint-plugin': ^66.7.3
+    astro-eslint-parser: ^2.1.0
+    eslint: ^10.6.0
+    eslint-plugin-astro: ^2.1.1
     eslint-plugin-format: ^2.0.1
     prettier-plugin-astro: ^0.14.1
   types:
