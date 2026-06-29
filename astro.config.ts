@@ -5,9 +5,10 @@ import SiteMap from '@astrojs/sitemap'
 import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 import { remarkReadingTime } from './plugins/remark-reading-time'
+import OxidizedImage from 'astro-oxidized-image';
 
 export default defineConfig({
-    integrations: [UnoCSS(), MDX(), SiteMap(), PartyTown()],
+    integrations: [UnoCSS(), MDX(), SiteMap(), PartyTown(), OxidizedImage()],
 
     site: 'https://tobynguyen.net',
     output: 'static',
