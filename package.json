@@ -48,7 +48,6 @@
         "taze": "catalog:dev",
         "ufo": "catalog:dev",
         "unocss": "catalog:dev",
-        "vfile": "catalog:dev",
-        "wrangler": "catalog:dev"
+        "vfile": "catalog:dev"
     }
 }
