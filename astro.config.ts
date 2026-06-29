@@ -2,10 +2,10 @@ import { unified } from '@astrojs/markdown-remark'
 import MDX from '@astrojs/mdx'
 import PartyTown from '@astrojs/partytown'
 import SiteMap from '@astrojs/sitemap'
+import OxidizedImage from 'astro-oxidized-image'
 import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 import { remarkReadingTime } from './plugins/remark-reading-time'
-import OxidizedImage from 'astro-oxidized-image';
 
 export default defineConfig({
     integrations: [UnoCSS(), MDX(), SiteMap(), PartyTown(), OxidizedImage()],
