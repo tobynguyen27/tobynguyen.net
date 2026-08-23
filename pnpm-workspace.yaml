@@ -14,7 +14,7 @@ allowBuilds:
 
 catalogs:
   build:
-    '@astrojs/compiler-rs': ^0.3.0
+    '@astrojs/compiler-rs': ^0.4.0
     '@astrojs/markdown-remark': ^7.2.0
     '@astrojs/mdx': ^7.0.0
     '@astrojs/partytown': ^2.1.7
