@@ -149,7 +149,7 @@ catalogs:
       version: 4.4.0
     react:
       specifier: ^19.2.7
-      version: 19.2.7
+      version: 19.2.8
     react-dom:
       specifier: ^19.2.7
       version: 19.2.7
@@ -188,7 +188,7 @@ catalogs:
       version: 4.0.4
     '@types/react':
       specifier: ^19.2.17
-      version: 19.2.17
+      version: 19.2.18
     '@types/react-dom':
       specifier: ^19.2.3
       version: 19.2.3
@@ -205,10 +205,10 @@ importers:
         version: 4.4.0
       react:
         specifier: catalog:frontend
-        version: 19.2.7
+        version: 19.2.8
       react-dom:
         specifier: catalog:frontend
-        version: 19.2.7(react@19.2.7)
+        version: 19.2.7(react@19.2.8)
       ufo:
         specifier: catalog:frontend
         version: 1.6.4
@@ -245,10 +245,10 @@ importers:
         version: 4.0.4
       '@types/react':
         specifier: catalog:types
-        version: 19.2.17
+        version: 19.2.18
       '@types/react-dom':
         specifier: catalog:types
-        version: 19.2.3(@types/react@19.2.17)
+        version: 19.2.3(@types/react@19.2.18)
       '@unocss/astro':
         specifier: catalog:dev
         version: 66.7.5(vite@8.1.0(@types/node@24.12.4)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
@@ -290,7 +290,7 @@ importers:
         version: 0.35.2
       takumi-js:
         specifier: catalog:dev
-        version: 1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: 1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)
       taze:
         specifier: catalog:scripts
         version: 19.14.1
@@ -2134,8 +2134,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.17':
-    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
+  '@types/react@19.2.18':
+    resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -3963,8 +3963,8 @@ packages:
     peerDependencies:
       react: ^19.2.7
 
-  react@19.2.7:
-    resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
+  react@19.2.8:
+    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
 
   readdirp@4.1.2:
@@ -6114,9 +6114,9 @@ snapshots:
   '@takumi-rs/core-win32-x64-msvc@1.8.7':
     optional: true
 
-  '@takumi-rs/core@1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@takumi-rs/core@1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)':
     dependencies:
-      '@takumi-rs/helpers': 1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@takumi-rs/helpers': 1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)
     optionalDependencies:
       '@takumi-rs/core-darwin-arm64': 1.8.7
       '@takumi-rs/core-darwin-x64': 1.8.7
@@ -6130,14 +6130,14 @@ snapshots:
       - react
       - react-dom
 
-  '@takumi-rs/helpers@1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@takumi-rs/helpers@1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)':
     optionalDependencies:
-      react: 19.2.7
-      react-dom: 19.2.7(react@19.2.7)
+      react: 19.2.8
+      react-dom: 19.2.7(react@19.2.8)
 
-  '@takumi-rs/wasm@1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@takumi-rs/wasm@1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)':
     dependencies:
-      '@takumi-rs/helpers': 1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@takumi-rs/helpers': 1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -6186,11 +6186,11 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react-dom@19.2.3(@types/react@19.2.17)':
+  '@types/react-dom@19.2.3(@types/react@19.2.18)':
     dependencies:
-      '@types/react': 19.2.17
+      '@types/react': 19.2.18
 
-  '@types/react@19.2.17':
+  '@types/react@19.2.18':
     dependencies:
       csstype: 3.2.3
 
@@ -8705,12 +8705,12 @@ snapshots:
 
   radix3@1.1.2: {}
 
-  react-dom@19.2.7(react@19.2.7):
+  react-dom@19.2.7(react@19.2.8):
     dependencies:
-      react: 19.2.7
+      react: 19.2.8
       scheduler: 0.27.0
 
-  react@19.2.7: {}
+  react@19.2.8: {}
 
   readdirp@4.1.2: {}
 
@@ -9148,11 +9148,11 @@ snapshots:
     dependencies:
       '@pkgr/core': 0.3.6
 
-  takumi-js@1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  takumi-js@1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8):
     dependencies:
-      '@takumi-rs/core': 1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@takumi-rs/helpers': 1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@takumi-rs/wasm': 1.8.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@takumi-rs/core': 1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)
+      '@takumi-rs/helpers': 1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)
+      '@takumi-rs/wasm': 1.8.7(react-dom@19.2.7(react@19.2.8))(react@19.2.8)
     transitivePeerDependencies:
       - react
       - react-dom
