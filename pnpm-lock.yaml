@@ -121,7 +121,7 @@ catalogs:
   dev:
     '@iconify/json':
       specifier: ^2.2.492
-      version: 2.2.522
+      version: 2.2.525
     '@unocss/astro':
       specifier: ^66.7.3
       version: 66.7.5
@@ -236,7 +236,7 @@ importers:
         version: 3.7.4
       '@iconify/json':
         specifier: catalog:dev
-        version: 2.2.522
+        version: 2.2.525
       '@napi-rs/image':
         specifier: catalog:build
         version: 1.14.0
@@ -1001,8 +1001,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify/json@2.2.522':
-    resolution: {integrity: sha512-YJfmIfMUNaYcmBVig39XoHoX133cDE97Rc9SxNKbfI2fOmfxfuPsZd1L2wv+fczSeq/bTEI+68SxBcg1dSZa2g==}
+  '@iconify/json@2.2.525':
+    resolution: {integrity: sha512-QB0vDFwtU13MgkiygAi1F6pS9zfTDUQZU0PPBGrU8FIAHpc8HBFNsCOW7r6JAb+OtCq3p+VuqbN4oNxlMdVm8w==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -5394,7 +5394,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@iconify/json@2.2.522':
+  '@iconify/json@2.2.525':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 2.0.3
