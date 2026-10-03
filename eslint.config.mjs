@@ -1,30 +1,27 @@
 import antfu from '@antfu/eslint-config'
+import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default antfu({
+export default withNuxt(
+  antfu({
     type: 'app',
 
     gitignore: true,
 
     stylistic: {
-        indent: 4,
-        quotes: 'single',
+      indent: 2,
+      quotes: 'single',
     },
     formatters: {
-        css: true,
-        astro: true,
-        markdown: true,
+      css: true,
+      markdown: true,
+      html: true,
     },
 
-    pnpm: true,
     vue: true,
     typescript: true,
-    astro: true,
-    unocss: true,
+    yaml: true,
     toml: true,
     jsonc: true,
-    yaml: {
-        overrides: {
-            'yaml/indent': ['error', 2],
-        },
-    },
-})
+    unocss: true,
+  }),
+)

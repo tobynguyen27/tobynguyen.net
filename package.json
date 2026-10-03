@@ -1,56 +1,28 @@
 {
-    "type": "module",
-    "private": true,
-    "packageManager": "pnpm@11.9.0",
-    "engines": {
-        "node": ">=22"
-    },
-    "scripts": {
-        "dev": "astro dev",
-        "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro",
-        "lint": "eslint",
-        "lint:fix": "eslint --fix",
-        "up": "taze"
-    },
-    "dependencies": {
-        "astro-seo": "catalog:frontend",
-        "date-fns": "catalog:frontend",
-        "react": "catalog:frontend",
-        "react-dom": "catalog:frontend",
-        "ufo": "catalog:frontend"
-    },
-    "devDependencies": {
-        "@antfu/eslint-config": "catalog:lint",
-        "@astrojs/compiler-rs": "catalog:build",
-        "@astrojs/markdown-remark": "catalog:build",
-        "@astrojs/mdx": "catalog:build",
-        "@astrojs/partytown": "catalog:build",
-        "@astrojs/rss": "catalog:build",
-        "@astrojs/sitemap": "catalog:build",
-        "@iconify/json": "catalog:dev",
-        "@napi-rs/image": "catalog:build",
-        "@types/mdast": "catalog:types",
-        "@types/react": "catalog:types",
-        "@types/react-dom": "catalog:types",
-        "@unocss/astro": "catalog:dev",
-        "@unocss/eslint-plugin": "catalog:lint",
-        "astro": "catalog:build",
-        "astro-eslint-parser": "catalog:lint",
-        "astro-oxidized-image": "catalog:build",
-        "eslint": "catalog:lint",
-        "eslint-plugin-astro": "catalog:lint",
-        "eslint-plugin-format": "catalog:lint",
-        "fast-xml-builder": "catalog:dev",
-        "mdast-util-to-string": "catalog:dev",
-        "prettier-plugin-astro": "catalog:lint",
-        "reading-time": "catalog:dev",
-        "sharp": "catalog:build",
-        "takumi-js": "catalog:dev",
-        "taze": "catalog:scripts",
-        "unocss": "catalog:build",
-        "vfile": "catalog:dev",
-        "wrangler": "catalog:build"
-    }
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "@nuxtjs/seo": "^5.3.16",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.5.1",
+    "@unocss/eslint-plugin": "^66.10.5",
+    "@unocss/nuxt": "^66.10.5",
+    "eslint": "^10.0.0",
+    "eslint-plugin-format": "^2.0.1",
+    "unocss": "^66.10.5"
+  }
 }
